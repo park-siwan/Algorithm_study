@@ -1,8 +1,8 @@
 def binary_search(element, some_list):
-    some_list = some_list
-    element = element
+
     left_index = 0
     right_index = (len(some_list) - 1)
+
     while left_index <= right_index:
         middle_index = (left_index + right_index) // 2
         middle_value = some_list[middle_index]
