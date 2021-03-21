@@ -79,7 +79,6 @@
 |최솟값, 최댓값 찾기 | <code>min(my_list)<br>max(my_list)</code> |*O(n)* |
 |길이 구하기 | <code>len(my_list)</code> |*O(1)* |
 |슬라이싱 | <code>my_list[a:b]</code> |*O(b-a)* |
-| |  | |
 
 </center>
 
@@ -101,6 +100,5 @@
 |값 찾기 | <code>my_dict[key]</code> |*O(1)* |
 |값 넣어주기/덮어쓰기 | <code>my_dict[key] = value<br></code> |*O(1)* |
 |값 삭제 | <code>del my_list[key]</code> |*O(1)* |
-| |  | |
 
 </center>
