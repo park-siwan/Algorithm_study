@@ -166,3 +166,51 @@ log<sub>2</sub> 16이랑 lg16이랑 같은 것이다.
 |값 삭제 | <code>del my_list[key]</code> |*O(1)* |
 
 </center>
+
+<br>
+
+# **알고리즘 패러다임**
+
+## **Brute Force**
+효율적인 알고리즘을 찾는 과정에 있어서 출발점은 항상 Brute Force이다. Brute Force에서 발전하는 것이니 이해할 필요가 있다.
+
+장점
+- 코드 구현이 쉽다.
+- 직관적이고 명확하다
+- 인풋이 크지 않을 때 유용하다.
+
+단점
+- 인풋이 크면 오래 걸린다.
+- 결국 효율적인 알고리즘을 찾아야한다.
+  
+</br>
+
+Brute Force는 아래 코드처럼 선형 구조를 전체적으로 탐색한다.
+
+```python
+def max_product(left, right):
+    max_product = -1
+    
+    for left in left:
+        for right in right:
+            max_product = max(max_product, left * right)
+
+    return max_product
+    
+print(max_product([1, 6, 5], [4, 2, 3]))
+print(max_product([1, -9, 3, 4], [2, 8, 3, 1]))
+print(max_product([-1, -7, 3], [-4, 3, 6]))
+```
+
+## **Divide and Conquer(분할정복)**
+
+Divide and Conquer란 큰 문제를 작게 나누어 해결하는 방식이다.
+
+분할 정복은 다음과 같은 절차를 거친다.
+
+1. ***Divide***
+   - 2개 이상의 작은 문제로 쪼갠다.
+2. ***Conquer***
+   - 나눠진 작은 문제를 푼다.
+3. ***Combine***
+   - 나눠 해결한 문제를 합친다.
