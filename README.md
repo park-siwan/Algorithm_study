@@ -188,11 +188,11 @@ log<sub>2</sub> 16이랑 lg16이랑 같은 것이다.
 Brute Force는 아래 코드처럼 선형 구조를 전체적으로 탐색한다.
 
 ```python
-def max_product(left, right):
+def max_product(left_number, right_number):
     max_product = -1
     
-    for left in left:
-        for right in right:
+    for left in left_number:
+        for right in right_number:
             max_product = max(max_product, left * right)
 
     return max_product
