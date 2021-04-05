@@ -214,8 +214,28 @@ Divide and Conquer란 큰 문제를 작게 나누어 해결하는 방식이다.
    - 나눠진 작은 문제를 푼다.
 3. ***Combine***
    - 나눠 해결한 문제를 합친다.
-   - 
-## **퀵정렬(Quick sort)**
+
+아래 코드는 분할정복의 예시이다.
+
+**1부터 n까지의 합**
+
+```python
+def consecutive_sum(start, end):
+    if start == end:
+        return start
+    
+    mid = (start + end) // 2
+    return consecutive_sum(start, mid) + consecutive_sum(mid + 1, end)
+
+# 테스트
+print(consecutive_sum(1, 10))
+print(consecutive_sum(1, 100))
+print(consecutive_sum(1, 253))
+print(consecutive_sum(1, 388))
+
+
+```
+### **퀵정렬(Quick sort)**
 
 ```python
 # 두 요소의 위치를 바꿔주는 helper function
@@ -257,16 +277,16 @@ def quicksort(my_list, start = 0, end = None):
 
 # 테스트 1
 list1 = [1, 3, 5, 7, 9, 11, 13, 11]
-quicksort(list1) # start, end 파라미터 없이 호출
+quicksort(list1)
 print(list1)
 
 # 테스트 2
 list2 = [28, 13, 9, 30, 1, 48, 5, 7, 15]
-quicksort(list2) # start, end 파라미터 없이 호출
+quicksort(list2)
 print(list2)
 
 # 테스트 3
 list3 = [2, 5, 6, 7, 1, 2, 4, 7, 10, 11, 4, 15, 13, 1, 6, 4]
-quicksort(list3) # start, end 파라미터 없이 호출
+quicksort(list3)
 print(list3)
 ```
