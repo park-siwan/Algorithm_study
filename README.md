@@ -182,8 +182,11 @@ log<sub>2</sub> 16이랑 lg16이랑 같은 것이다.
 단점
 - 인풋이 크면 오래 걸린다.
 - 결국 효율적인 알고리즘을 찾아야한다.
-  
+
 </br>
+
+**Brute Force 예제 코드**
+
 
 Brute Force는 아래 코드처럼 선형 구조를 전체적으로 탐색한다.
 
@@ -202,16 +205,7 @@ print(max_product([1, -9, 3, 4], [2, 8, 3, 1]))
 print(max_product([-1, -7, 3], [-4, 3, 6]))
 ```
 
-  
-
-1. ***Divide***
-   - 2개 이상의 작은 문제로 쪼갠다.
-2. ***Conquer***
-   - 나눠진 작은 문제를 푼다.
-3. ***Combine***
-   - 나눠 해결한 문제를 합친다.
-
-아래 코드는 분할정복의 예시이다.
+<br>
 
 **1부터 n까지의 합**
 
@@ -228,9 +222,25 @@ print(consecutive_sum(1, 10))
 print(consecutive_sum(1, 100))
 print(consecutive_sum(1, 253))
 print(consecutive_sum(1, 388))
-
-
 ```
+<br>
+
+## **Divide & Conquer(분할정복)**
+문제를 성질이 똑같은 여러개의 부분 문제로 나누어 원래 문제의 해를 구하는 방식
+
+분할 정복은 3가지 절차를 거친다.
+
+1. ***Divide***
+   - 2개 이상의 작은 문제로 쪼갠다.
+2. ***Conquer***
+   - 나눠진 작은 문제를 푼다.
+3. ***Combine***
+   - 나눠 해결한 문제를 합친다.
+
+<br>
+
+**Divide & Conquer(분할정복) 예제코드**
+
 ### **퀵정렬(Quick sort)**
 
 ```python
