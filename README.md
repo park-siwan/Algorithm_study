@@ -292,18 +292,30 @@ print(list3)
 
 Dynamic Programming 중복되는 부분문제를 해결하는 방법이다. 즉, 한번 계산한 결과를 재활용해서 효율적인 알고리즘을 만든다.
 
+<br>
+
 ### **네가지 개념**
 
 1. ***최적 부분 구조(Optimal Substructure)***
    - 문제를 발견하면 부분 문제들의 최적의 답을 이용해서 기존 문제의 최적의 답을 구할 수 있는지 확인해보자.
+
+<br>
+
 2. ***중복되는 부분 문제(Overlapping Subproblems)***
    - 최적 부분 구조가 발견되면 중복되는 계산을 찾아서 대비해야 한다. 계산 결과를 재활용 하기위한 2가지 방법으로 Memoization과 Tabulation이 있다.
+
+<br>
+
 3. ***Memoization***
-   - 캐시를 딕셔너리<code>{}</code>에 보관한다. ex) 
+   - 캐시를 딕셔너리<code>{}</code>에 보관한다.
    - 재귀함수를 사용한다. (스택 과부화 리스크 존재)
    - 위에서 아래로 가는 사고방식(Top-down Approach)
    - 모든 문제를 해결하지 않아도 될 떄 효율적
-3. ***Tabulation***
+
+
+<br>
+
+4. ***Tabulation***
    - 캐시를 리스트<code>[]</code>에 보관 혹은 공간 최적화 후 swap
    - 반복문 for 등을 사용
    - 상향식 접근(Bottom-up Approach)
