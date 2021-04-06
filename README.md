@@ -329,7 +329,7 @@ Dynamic Programming은 모든 값을 저장할 필요가 없는 경우 공간 �
 
 <br>
 
-### **Dynamic Programming(동적 프로그래밍) 예제코드 : 피보나치 수열 공간 최적화**
+### **피보나치 수열 공간 최적화 - Tabulation 활용**
 ```python
 def fib_optimized(n):
     current = 1
