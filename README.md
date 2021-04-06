@@ -202,11 +202,7 @@ print(max_product([1, -9, 3, 4], [2, 8, 3, 1]))
 print(max_product([-1, -7, 3], [-4, 3, 6]))
 ```
 
-## **Divide and Conquer(분할정복)**
-
-Divide and Conquer란 큰 문제를 작게 나누어 해결하는 방식이다.
-
-분할 정복은 다음과 같은 절차를 거친다.
+  
 
 1. ***Divide***
    - 2개 이상의 작은 문제로 쪼갠다.
@@ -289,4 +285,52 @@ print(list2)
 list3 = [2, 5, 6, 7, 1, 2, 4, 7, 10, 11, 4, 15, 13, 1, 6, 4]
 quicksort(list3)
 print(list3)
+```
+<br>
+
+## **Dynamic Programming(동적 프로그래밍)**
+
+Dynamic Programming 중복되는 부분문제를 해결하는 방법이다. 즉, 한번 계산한 결과를 재활용해서 효율적인 알고리즘을 만든다.
+
+### **네가지 개념**
+
+1. ***최적 부분 구조(Optimal Substructure)***
+   - 문제를 발견하면 부분 문제들의 최적의 답을 이용해서 기존 문제의 최적의 답을 구할 수 있는지 확인해보자.
+2. ***중복되는 부분 문제(Overlapping Subproblems)***
+   - 최적 부분 구조가 발견되면 중복되는 계산을 찾아서 대비해야 한다. 계산 결과를 재활용 하기위한 2가지 방법으로 Memoization과 Tabulation이 있다.
+3. ***Memoization***
+   - 캐시를 딕셔너리<code>{}</code>에 보관한다. ex) 
+   - 재귀함수를 사용한다. (스택 과부화 리스크 존재)
+   - 위에서 아래로 가는 사고방식(Top-down Approach)
+   - 모든 문제를 해결하지 않아도 될 떄 효율적
+3. ***Tabulation***
+   - 캐시를 리스트<code>[]</code>에 보관 혹은 공간 최적화 후 swap
+   - 반복문 for 등을 사용
+   - 상향식 접근(Bottom-up Approach)
+   - 모든 문제를 해결해야 할 때 효율적
+
+<br>
+
+### **TIP**
+
+Dynamic Programming은 모든 값을 저장할 필요가 없는 경우 공간 최적화를 고려해야 한다. 즉, 공간 복잡도를 $O(1)$ 로 효율적인 구성을 하자. 예를들어 사용하는 메모리를 고정하기 위해 배열에 <code>.append</code>나 재귀를 쓰지말고 변수 초기화 후 값연산, 혹은 값대입후 swap을 해주면된다.
+
+<br>
+
+### **Dynamic Programming(동적 프로그래밍) 예제코드 : 피보나치 수열 공간 최적화**
+```python
+def fib_optimized(n):
+    current = 1
+    previous = 0
+
+    for i in range(1, n)
+        current, previous = current + previous, current
+
+    return current
+
+# 테스트
+print(fib_optimized(16))  # 987
+
+#  시간 복잡도 : O(n)
+#  공간 복잡도 : O(1)
 ```
